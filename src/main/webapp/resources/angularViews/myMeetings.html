@@ -1,0 +1,22 @@
+<div class="container">
+
+	<h5>Hosted Meetings</h5>
+	
+	<div class="card" data-ng-repeat="meeting in meetings.hostedMeetings">
+		<table class="table table-xsm table-striped">
+			<tr>
+				<td style="width: 10em">Subject:</td>
+				<td>{{ meeting.subject }}</td>
+			</tr>
+			<tr>
+				<td style="width: 10em">Time:</td>
+				<td>{{ meeting.time | date : "short" }}</td>
+			</tr>
+			<tr>
+				<td style="width: 10em">Location:</td>
+				<td>{{ meeting.location }}</td>
+			</tr>
+		</table>
+	</div> <!-- End of Card -->
+	
+</div> <!-- End of Container -->

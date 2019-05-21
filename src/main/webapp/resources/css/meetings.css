@@ -1,0 +1,12 @@
+.modify-icons {
+	padding: 6px;
+	width: 24px;
+	background-color: white;
+	box-shadow: 0px 2px 10px 0px #d5d5d5;
+}
+.modify-icons:hover {
+	box-shadow: 0px 2px 10px 0px #959595;
+}
+.table {
+	margin: 0px;
+}

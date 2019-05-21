@@ -1,0 +1,52 @@
+<div class="container">
+
+	<div class="card">
+	
+		<a class="btn btn-light" data-ng-click="meetings.getAllMeetings()">
+			Refresh
+			<img src="/meeting-planner/resources/images/icons/reload.svg"/>
+		</a>
+	
+		<table class="table table-sm table-striped">
+		
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Subject</th>
+					<th>Time</th>
+					<th>Location</th>
+					<th>Host</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr data-ng-repeat="meeting in meetings.allMeetings">
+					<td>{{ meeting.id }}</td>
+					<td>{{ meeting.subject }}</td>
+					<td>{{ meeting.time | date : "short" }}</td>
+					<td>{{ meeting.location }}</td>
+					<td>{{ meeting.hostUser.fullName }}</td>
+					<td>
+						<a href="#!/updateMeeting" data-ng-click="meetings.selectMeeting(meeting)">
+							<img class="modify-icons" src="/meeting-planner/resources/images/icons/pencil.svg"/>
+						</a>
+						<a href="#/!" data-ng-click="meetings.deleteMeeting(meeting)">
+							<img class="modify-icons" src="/meeting-planner/resources/images/icons/minus.svg"/>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		
+		<a href="#!/newMeeting" class="btn btn-light" >
+			Add New Meeting
+			<img src="/meeting-planner/resources/images/icons/plus.svg"/>
+		</a>
+		
+	</div> <!-- End of Card -->
+	
+	<p class="error">{{ meetings.errorMessage }}</p>
+	
+</div> <!-- End of Container -->

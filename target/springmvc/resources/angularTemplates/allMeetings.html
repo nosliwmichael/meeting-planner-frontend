@@ -1,0 +1,44 @@
+<div class="container">
+
+	<div class="card">
+	
+		<a class="btn btn-light" data-ng-click="meetings.getAllMeetings()">Refresh
+					<img src="/springmvc/resources/images/icons/reload.svg"/></a>
+	
+		<table class="table table-sm table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Subject</th>
+					<th>Time</th>
+					<th>Location</th>
+					<th>Host</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr data-ng-repeat="s in meetings.allMeetings">
+					<td>{{ s.id }}</td>
+					<td>{{ s.subject }}</td>
+					<td>{{ s.time | date : "short" }}</td>
+					<td>{{ s.location }}</td>
+					<td>{{ s.host.fullName }}</td>
+					<td>
+						<a href="#!/updateMeeting" data-ng-click="meetings.selectMeeting(s)">
+							<img class="modify-icons" src="/springmvc/resources/images/icons/pencil.svg"/>
+						</a>
+						<a href="#/!" data-ng-click="meetings.deleteMeeting(s)">
+							<img class="modify-icons" src="/springmvc/resources/images/icons/minus.svg"/>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="#!/newMeeting" class="btn btn-light" >Add New Meeting
+					<img src="/springmvc/resources/images/icons/plus.svg"/></a>
+	</div> <!-- End of Card -->
+	
+	<p class="error">{{ meetings.errorMessage }}</p>
+	
+</div> <!-- End of Container -->

@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #f9f9f9;
+}
+
+nav {
+	margin: 0 0 1rem 0;
+	padding: .5rem;
+	
+	background-color: white;
+	box-shadow: 0px 2px 10px 0px #d5d5d5
+}
+
+.card {
+	overflow-x: auto;
+	margin: 1rem;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.error {
+	color: red;
+}

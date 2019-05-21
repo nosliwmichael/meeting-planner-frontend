@@ -1,0 +1,29 @@
+<div class="container">
+
+	<div class="card">
+		<h5 class="card-title">New Meeting</h5>	
+		<table class="table table-sm table-striped">
+			<tr>
+				<td><p>Subject:</p></td>
+				<td><input id="newMeetingSubject" type="text" data-ng-model="meeting.newMeeting.subject" required></td>
+			</tr>
+			<tr>
+				<td><p>Time:</p></td>
+				<td><input id="newMeetingTime" type="datetime-local" data-ng-model="meeting.newMeeting.time" required></td>
+			</tr>
+			<tr>
+				<td><p>Location:</p></td>
+				<td><input id="newMeetingLocation" type="text" data-ng-model="meeting.newMeeting.location" required></td>
+			</tr>
+			<tr>
+				<td><p>Host:</p></td>
+				<td><input id="newMeetingHost" type="text" value="{{ meeting.newMeeting.hostUser.id }}" ></td>
+			</tr>
+		</table>
+
+		<a id="newMeetingBtn" class="btn btn-light" data-ng-click="meeting.createMeeting()">Submit</a>
+	</div> <!-- End of Card -->
+	
+	<p class="error">{{ meeting.errorMessage }}</p>
+
+</div> <!-- End of Container -->
