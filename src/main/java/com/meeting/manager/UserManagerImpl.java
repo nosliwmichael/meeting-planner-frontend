@@ -40,7 +40,7 @@ public class UserManagerImpl implements UserManager {
 		ResponseEntity<UserView> response = rest.exchange(
 				REST_SERVICE_URI,
 				HttpMethod.PUT,
-				new HttpEntity<>(null, new HttpHeaders()),
+				new HttpEntity<>(user, new HttpHeaders()),
 				UserView.class);
 		
 		return response.getBody();

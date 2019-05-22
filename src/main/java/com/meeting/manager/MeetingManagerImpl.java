@@ -34,7 +34,7 @@ public class MeetingManagerImpl implements MeetingManager {
 		ResponseEntity<MeetingView> response = rest.exchange(
 				REST_SERVICE_URI,
 				HttpMethod.PUT,
-				new HttpEntity<>(null, new HttpHeaders()),
+				new HttpEntity<>(meeting, new HttpHeaders()),
 				MeetingView.class);
 		
 		return response.getBody();
