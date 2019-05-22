@@ -2,8 +2,8 @@ package com.meeting.manager;
 
 import java.util.List;
 
-import com.meeting.modelView.LoginView;
-import com.meeting.modelView.UserView;
+import com.meeting.viewmodel.LoginView;
+import com.meeting.viewmodel.UserView;
 
 public interface UserManager {
 	

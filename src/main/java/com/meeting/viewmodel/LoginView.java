@@ -1,4 +1,4 @@
-package com.meeting.modelView;
+package com.meeting.viewmodel;
 
 
 public class LoginView {

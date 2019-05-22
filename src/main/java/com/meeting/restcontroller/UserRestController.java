@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.meeting.manager.UserManager;
-import com.meeting.modelView.UserView;
+import com.meeting.viewmodel.UserView;
 
 @RestController
 @RequestMapping(value="/api/user")

@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.meeting.modelView.MeetingView;
+import com.meeting.viewmodel.MeetingView;
 
 @Service
 public class MeetingManagerImpl implements MeetingManager {

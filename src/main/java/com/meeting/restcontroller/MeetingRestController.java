@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.meeting.manager.MeetingManager;
-import com.meeting.modelView.MeetingView;
+import com.meeting.viewmodel.MeetingView;
 
 @RestController
 @RequestMapping(value="/api/meeting")

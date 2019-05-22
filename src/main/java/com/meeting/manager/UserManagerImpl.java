@@ -11,8 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.meeting.modelView.LoginView;
-import com.meeting.modelView.UserView;
+import com.meeting.viewmodel.LoginView;
+import com.meeting.viewmodel.UserView;
 
 @Service
 public class UserManagerImpl implements UserManager {

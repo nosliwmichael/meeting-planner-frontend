@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.meeting.manager.UserManager;
-import com.meeting.modelView.LoginView;
-import com.meeting.modelView.UserView;
+import com.meeting.viewmodel.LoginView;
+import com.meeting.viewmodel.UserView;
 
 @Controller
 public class UserController {
