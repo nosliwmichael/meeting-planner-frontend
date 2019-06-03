@@ -7,7 +7,7 @@
 			<img src="/meeting-planner/resources/images/icons/reload.svg"/>
 		</a>
 	
-		<table class="table table-sm table-striped">
+		<table id="allMeetingsTable" class="table table-sm table-striped">
 		
 			<thead>
 				<tr>
@@ -21,17 +21,17 @@
 			</thead>
 			
 			<tbody>
-				<tr data-ng-repeat="meeting in meetings.allMeetings">
-					<td>{{ meeting.id }}</td>
-					<td>{{ meeting.subject }}</td>
-					<td>{{ meeting.time | date : "short" }}</td>
-					<td>{{ meeting.location }}</td>
-					<td>{{ meeting.hostUser.fullName }}</td>
-					<td>
-						<a href="#!/updateMeeting" data-ng-click="meetings.selectMeeting(meeting)">
+				<tr class="meetingRow" data-ng-repeat="meeting in meetings.allMeetings">
+					<td class="meetingRowID">{{ meeting.id }}</td>
+					<td class="meetingRowSubject">{{ meeting.subject }}</td>
+					<td class="meetingRowTime">{{ meeting.time | date : "short" }}</td>
+					<td class="meetingRowLocation">{{ meeting.location }}</td>
+					<td class="meetingRowHost">{{ meeting.hostUser.fullName }}</td>
+					<td class="meetingRowEdit">
+						<a class="editMeetingButton" href="#!/updateMeeting" data-ng-click="meetings.selectMeeting(meeting)">
 							<img class="modify-icons" src="/meeting-planner/resources/images/icons/pencil.svg"/>
 						</a>
-						<a href="#/!" data-ng-click="meetings.deleteMeeting(meeting)">
+						<a class="deleteMeetingButton" href="#/!" data-ng-click="meetings.deleteMeeting(meeting)">
 							<img class="modify-icons" src="/meeting-planner/resources/images/icons/minus.svg"/>
 						</a>
 					</td>
@@ -40,7 +40,7 @@
 			
 		</table>
 		
-		<a href="#!/newMeeting" class="btn btn-light" >
+		<a id="newMeetingButton" href="#!/newMeeting" class="btn btn-light" >
 			Add New Meeting
 			<img src="/meeting-planner/resources/images/icons/plus.svg"/>
 		</a>

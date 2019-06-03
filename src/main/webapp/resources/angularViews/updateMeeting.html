@@ -2,7 +2,7 @@
 	
 	<div class="card">
 		<h5 class="card-title">Meeting View</h5>	
-		<table class="table table-sm table-striped">
+		<table id="updateMeetingTable" class="table table-sm table-striped">
 			<tr>
 				<td><p>Subject:</p></td>
 				<td><input id="selectedMeetingSubject" type="text" data-ng-model="meeting.selectedMeeting.subject" required></td>
@@ -22,7 +22,7 @@
 				<td><input id="selectedMeetingHost" type="text" value="{{meeting.selectedMeeting.hostUser.firstName + ' ' + meeting.selectedMeeting.hostUser.lastName}}" readonly></td>
 			</tr>
 		</table>
-		<a id="updateMeetingBtn" class="btn btn-light" data-ng-click="meeting.updateMeeting()">Update</a>
+		<a id="updateMeetingButton" class="btn btn-light" data-ng-click="meeting.updateMeeting()">Update</a>
 	</div> <!-- End of Card -->
 	
 	<p class="error">{{ meeting.errorMessage }}</p>

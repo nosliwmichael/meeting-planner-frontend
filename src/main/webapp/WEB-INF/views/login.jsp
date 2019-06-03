@@ -23,7 +23,7 @@
 			
 			
 			<div class="form-group">
-				<input type="submit" value="Login" class="btn btn-primary"/>
+				<input id="loginButton" type="submit" value="Login" class="btn btn-primary"/>
 			</div>	
 		</form:form>
 		

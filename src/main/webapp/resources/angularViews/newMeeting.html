@@ -2,7 +2,7 @@
 
 	<div class="card">
 		<h5 class="card-title">New Meeting</h5>	
-		<table class="table table-sm table-striped">
+		<table id="newMeetingTable" class="table table-sm table-striped">
 			<tr>
 				<td><p>Subject:</p></td>
 				<td><input id="newMeetingSubject" type="text" data-ng-model="meeting.newMeeting.subject" required></td>
@@ -21,7 +21,7 @@
 			</tr>
 		</table>
 
-		<a id="newMeetingBtn" class="btn btn-light" data-ng-click="meeting.createMeeting()">Submit</a>
+		<a id="newMeetingButton" class="btn btn-light" data-ng-click="meeting.createMeeting()">Submit</a>
 	</div> <!-- End of Card -->
 	
 	<p class="error">{{ meeting.errorMessage }}</p>
