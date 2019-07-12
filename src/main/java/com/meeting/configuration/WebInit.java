@@ -6,6 +6,7 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
 	
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
+		System.out.print("getRootConfig");
 		return new Class[] { WebMvcConfig.class };
 	}
 

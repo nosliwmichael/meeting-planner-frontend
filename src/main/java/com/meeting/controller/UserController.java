@@ -19,9 +19,12 @@ public class UserController {
 	
 	// LOGIN PAGE
 	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public String login(@ModelAttribute(name="userLogin") LoginView user) {
-		
-		return "login";
+	public ModelAndView login(@ModelAttribute(name="userLogin") LoginView user) {
+
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("title", "Login");
+		mv.setViewName("login");
+		return mv;
 		
 	}
 	
@@ -41,9 +44,12 @@ public class UserController {
 	
 	// REGISTER PAGE
 	@RequestMapping(value="/register")
-	public String createAccount(@ModelAttribute(name="newUser") UserView newUser) {
-
-		return "register";
+	public ModelAndView createAccount(@ModelAttribute(name="newUser") UserView newUser) {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("title", "Registration");
+		mv.setViewName("register");
+		return mv;
 		
 	}
 	

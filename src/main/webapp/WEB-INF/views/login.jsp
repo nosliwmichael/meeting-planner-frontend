@@ -11,19 +11,25 @@
 		
 			<div class="form-group">
 				<label for="emailInput">Email:</label>
-				<form:input id="emailInput" path="email" type="text" name="email" placeholder="Enter email address" class="form-control"/>
+				<form:input id="emailInput" path="email" 
+					type="email" name="email" placeholder="Enter email address" 
+					class="form-control" required="required"/>
 				<form:errors path="email" cssClass="error" />
 			</div>
 				
 			<div class="form-group">
 				<label for="passwordInput">Password:</label>
-				<form:input id="passwordInput" path="password" type="password" name="password" placeholder="Enter password" class="form-control"/>
+				<form:input id="passwordInput" path="password" 
+					type="password" name="password" placeholder="Enter password" 
+					class="form-control" required="required"/>
 				<form:errors path="password" cssClass="error" />
 			</div>
 			
+			<span id="errorMessage" class="error"></span><br>
+			
 			
 			<div class="form-group">
-				<input id="loginButton" type="submit" value="Login" class="btn btn-primary"/>
+				<input id="submitButton" type="submit" value="Login" class="btn btn-primary"/>
 			</div>	
 		</form:form>
 		
@@ -33,3 +39,4 @@
 	</main>
 	
 <jsp:include page="footer.jsp"></jsp:include>
+<script src="resources/javascript/data-validation.js"></script>

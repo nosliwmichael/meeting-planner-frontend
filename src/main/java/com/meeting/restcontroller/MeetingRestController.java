@@ -26,7 +26,7 @@ public class MeetingRestController {
 	@RequestMapping(value="/", method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<MeetingView> createMeeting(@RequestBody MeetingView meeting) {
 		
-		// Implement a CONFLICT response
+		// TODO Implement a CONFLICT response
 		
 		MeetingView newMeeting = meetingManager.create(meeting);
 		return new ResponseEntity<>(newMeeting, HttpStatus.CREATED);

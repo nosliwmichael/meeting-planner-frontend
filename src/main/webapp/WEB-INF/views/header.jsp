@@ -8,7 +8,7 @@
 <head>
 	<meta charset="ISO-8859-1">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Meeting Planner</title>
+	<title>Meeting Planner - ${title}</title>
 	<link rel="icon" href="<c:url value = "/resources/images/favicon.ico"/>" />
 	
 	<!-- Stylesheets -->
